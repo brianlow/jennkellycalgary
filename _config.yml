@@ -1,0 +1,8 @@
+# Site settings
+title: Jenn Kelly
+description: "Personal & Executive Assistant. Clean | Organize | Errands."
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://jennkellycalgary.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
