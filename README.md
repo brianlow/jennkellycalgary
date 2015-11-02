@@ -24,6 +24,12 @@ Other
 - git commit "Description of your changes"
 - git push
 
+### Live reloading
+- install LiveReload browser extension: http://livereload.com/extensions/#installing-sections
+- `guard` instead of jekyll serve
+- Open your browser to http://localhost:4000
+- Enable LiveReload on the page
+
 
 ### Upgrade Bootstrap
 Currently using 3.3.5. Download bootstrap-sass. Extract and copy `bootstrap-sass-3.3.5/assets/stylesheets` to `/_sass/bootstrap`. You should have a file `/_sass/bootstrap/_bootstrap.scss`.

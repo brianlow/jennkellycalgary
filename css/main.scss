@@ -3,5 +3,55 @@
 ---
 @charset "utf-8";
 
+// Bootstrap variables
+$font-family-base: 'Open Sans', sans-serif;
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "bootstrap/bootstrap";
+
+// Styles for the site
+
+
+.headline {
+	padding-top: 50px;
+	font-size: 18px;
+	line-height: 1.5;
+
+	.name {
+		font-size: 48px;
+		letter-spacing: -0.06em;
+		line-height: 1.5;
+		.first { font-weight: bold; }
+	}
+
+	.contact {
+		padding-top: 50px;
+		line-height: 2;
+	}
+}
+
+.byline {
+	padding: 50px;
+	font-size: 16pt; // not sure why Chrome ends up rendering this as 21px
+	font-style: italic;
+	color: #AAAAAA;
+	font-weight: 300;
+	@extend .text-center;
+}
+
+.services {
+	.icon {
+		font-size: 60px;
+		color: #57B6CE;
+		@extend .text-center;
+	}
+	.title {
+		@extend .text-center;		
+		font-size: 24px;
+	}
+	.text {
+		font-size: 12pt;
+		font-weight: 300;
+		color: #AAAAAA;
+	}
+}
