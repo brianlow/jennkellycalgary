@@ -3,55 +3,140 @@
 ---
 @charset "utf-8";
 
-// Bootstrap variables
+// --------------------------------
+// Bootstrap
+// --------------------------------
 $font-family-base: 'Open Sans', sans-serif;
-
-// Import partials from `sass_dir` (defaults to `_sass`)
+$brand-primary: #57B6CE;
 @import "bootstrap/bootstrap";
 
+// --------------------------------
 // Styles for the site
+// --------------------------------
 
+// General styles
+a { color: white; }
+.btn, .btn:focus, .form-control {
+	border-color: white;
+	color: white;
+	background-color: transparent; 
+	&::-webkit-input-placeholder {
+		color: lighten($brand-primary, 20%);
+	}
+}
 
+::-webkit-input-placeholder {
+	color: white;
+}
+
+// Styles for the main graphic + name + tagline
 .headline {
-	padding-top: 50px;
+	background-color: darken($brand-primary, 15%);
+	background-image: radial-gradient(50% 50%, $brand-primary, darken($brand-primary, 15%) 100%);
+	color: white;
+	padding-top: 100px;
+	padding-bottom: 75px;
 	font-size: 18px;
 	line-height: 1.5;
+	font-weight: 300;
 
-	.name {
+	h1 {
 		font-size: 48px;
 		letter-spacing: -0.06em;
 		line-height: 1.5;
 		.first { font-weight: bold; }
 	}
 
-	.contact {
-		padding-top: 50px;
+	.headline-contact {
+		padding-top: 100px;
 		line-height: 2;
+		font-weight: 300;
 	}
 }
 
+// Styles for the "I help busy people..."
 .byline {
 	padding: 50px;
-	font-size: 16pt; // not sure why Chrome ends up rendering this as 21px
+	font-size: 22px;
 	font-style: italic;
 	color: #AAAAAA;
 	font-weight: 300;
 	@extend .text-center;
 }
 
+// Styles for the list of services / features
 .services {
 	.icon {
-		font-size: 60px;
-		color: #57B6CE;
+		font-size: 50px;
+		color: $brand-primary;
 		@extend .text-center;
 	}
 	.title {
 		@extend .text-center;		
 		font-size: 24px;
 	}
+	.list {
+		font-size: 16px;
+		font-weight: 300;
+		color: #AAAAAA;
+	}
 	.text {
 		font-size: 12pt;
 		font-weight: 300;
 		color: #AAAAAA;
+		@extend .text-center;		
+		padding-left: 50px;
+		padding-right: 50px;
 	}
 }
+
+// Styles for quotes from testimonals 
+.quote {
+	padding: 50px;
+	font-size: 22px;
+	font-style: italic;
+	color: #AAAAAA;
+	font-weight: 300;
+	@extend .text-center;
+	.fancy {
+		font-family: 'Times New Roman';
+		font-size: 48px;
+		position : relative;
+		top: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.name {
+		padding-left: 150px;
+		font-size: 18px;
+	}
+
+}
+
+// Styles for the contact form at the bottom
+.contact {
+	background-color: darken($brand-primary, 15%);
+	background-image: radial-gradient(50% 50%, $brand-primary, darken($brand-primary, 15%) 100%);
+	color: white;
+	padding-top: 35px;
+	padding-left: 50px;
+	padding-bottom: 50px;
+	font-size: 18px;
+	line-height: 1.5;
+	font-weight: 300;
+
+	h2 {
+		font-size: 36px;
+		font-weight: 300;
+	}
+
+	.quick-links {
+		padding-top: 10px;
+		padding-bottom: 25px;
+		.tel {
+			padding-left: 25px;
+		}
+
+	}
+}
+
