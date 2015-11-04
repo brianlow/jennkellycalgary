@@ -35,6 +35,7 @@ $brand-primary: #57B6CE;
 	color: white;
 	padding-top: 100px;
 	padding-bottom: 75px;
+	margin-bottom: 50px;
 	padding-left: 50px;
 	font-size: 18px;
 	line-height: 1.5;
@@ -75,13 +76,16 @@ $brand-primary: #57B6CE;
 	}
 	.title {
 		@extend .text-center;		
-		font-size: 24px;
+		font-weight: bold;
+		font-size: 22px;
 	}
 	.list {
 		font-size: 16px;
 		font-weight: 300;
 		color: #AAAAAA;
 		@extend .text-center;
+		ul { padding: 0}
+		li { list-style-type: none; }
 	}
 	.text {
 		font-size: 12pt;
