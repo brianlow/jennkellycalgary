@@ -7,7 +7,7 @@
 // Bootstrap
 // --------------------------------
 $font-family-base: 'Open Sans', sans-serif;
-$brand-primary: #57B6CE;
+$brand-primary: #CA8D4C; // orange from chair
 @import "bootstrap/bootstrap";
 
 // --------------------------------
@@ -15,14 +15,15 @@ $brand-primary: #57B6CE;
 // --------------------------------
 
 $body-color: #7E7E7E; // medium grey
+$image-background-color: #DBD8D3; // grey from the wall
 
 // General styles
 .btn, .btn:focus, .form-control {
-	border-color: white;
-	color: white;
+	border-color: black;
+	color: black;
 	background-color: transparent; 
 	&::-webkit-input-placeholder {
-		color: lighten($brand-primary, 20%);
+		color: darken($image-background-color, 20%);
 	}
 }
 
@@ -32,20 +33,22 @@ $body-color: #7E7E7E; // medium grey
 
 // Styles for the main graphic + name + tagline
 .headline {
-	background-color: darken($brand-primary, 15%);
-	background-image: radial-gradient(50% 50%, $brand-primary, darken($brand-primary, 15%) 100%);
-	color: white;
+	background-size: cover;
+    background-color: darken($image-background-color, 15%);
+    background-image: radial-gradient(50% 50%, $image-background-color, darken($image-background-color, 15%) 100%);	height: 750px;
+	background-image: url(/images/Jen_2015-18.jpg);
+	color: black;
 	padding-top: 100px;
 	padding-bottom: 75px;
 	margin-bottom: 50px;
 	padding-left: 50px;
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 1.5;
 	font-weight: 300;
-	a { color: white; }
+	a { color: black; }
 
 	h1 {
-		font-size: 48px;
+		font-size: 52px;
 		letter-spacing: -0.06em;
 		line-height: 1.5;
 		font-weight: bold;
@@ -128,9 +131,10 @@ $body-color: #7E7E7E; // medium grey
 
 // Styles for the contact form at the bottom
 .contact {
-	background-color: darken($brand-primary, 15%);
-	background-image: radial-gradient(50% 50%, $brand-primary, darken($brand-primary, 15%) 100%);
-	color: white;
+	background-color: darken($image-background-color, 15%);
+	//background-image: linear-gradient(45deg, #E2DDD7, #C0BEBE);
+	background-image: radial-gradient(50% 50%, #E2DDD7, darken(#E2DDD7, 5%) 100%);
+	color: black;
 	padding-top: 35px;
 	padding-left: 50px;
 	padding-right: 50px;
@@ -138,7 +142,7 @@ $body-color: #7E7E7E; // medium grey
 	font-size: 18px;
 	line-height: 1.5;
 	font-weight: 300;
-	a { color: white; }
+	a { color: black; }
 
 	h2 {
 		font-size: 36px;
