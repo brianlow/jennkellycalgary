@@ -7,7 +7,7 @@
 // Bootstrap
 // --------------------------------
 $font-family-base: 'Open Sans', sans-serif;
-$brand-primary: #CA8D4C; // orange from chair
+$brand-primary: lighten(#326B7E, 10%); // blue, opposite of orange from chair on color wheel
 @import "bootstrap/bootstrap";
 
 // --------------------------------
@@ -15,7 +15,7 @@ $brand-primary: #CA8D4C; // orange from chair
 // --------------------------------
 
 $body-color: #7E7E7E; // medium grey
-$image-background-color: #DBD8D3; // grey from the wall
+$image-background-color: lighten(#DBD8D3, 15%); // grey from the wall
 
 // General styles
 .btn, .btn:focus, .form-control {
@@ -23,8 +23,12 @@ $image-background-color: #DBD8D3; // grey from the wall
 	color: black;
 	background-color: transparent; 
 	&::-webkit-input-placeholder {
-		color: darken($image-background-color, 20%);
+		color: darken($image-background-color, 30%);
 	}
+}
+.btn:hover {
+	background-color: fade-out(black, .9);
+	transition: 0.35s;
 }
 
 ::-webkit-input-placeholder {
@@ -133,7 +137,7 @@ $image-background-color: #DBD8D3; // grey from the wall
 .contact {
 	background-color: darken($image-background-color, 15%);
 	//background-image: linear-gradient(45deg, #E2DDD7, #C0BEBE);
-	background-image: radial-gradient(50% 50%, #E2DDD7, darken(#E2DDD7, 5%) 100%);
+	background-image: radial-gradient(50% 50%, $image-background-color, darken($image-background-color, 10%) 100%);
 	color: black;
 	padding-top: 35px;
 	padding-left: 50px;
