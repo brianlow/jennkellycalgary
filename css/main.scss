@@ -59,11 +59,21 @@ $image-background-color: lighten(#DBD8D3, 15%); // grey from the wall
 	}
 
 	.headline-contact {
-		padding-top: 100px;
+		padding-top: 50px;
 		line-height: 2;
 		font-weight: 300;
+
+		@media (min-width: 992px) {
+			padding-top: 70px;
+			padding-left: 50px;
+		}
+		@media (min-width: 1200px) {
+			padding-top: 100px;
+			padding-left: 0px;
+		}
 	}
 }
+
 
 // Styles for the "I help busy people..."
 .byline {
