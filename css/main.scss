@@ -220,8 +220,13 @@ $image-background-color: lighten(#DBD8D3, 15%); // grey from the wall
 	.quick-links {
 		padding-top: 10px;
 		padding-bottom: 25px;
+
+		.email {
+			padding-right: 25px;
+			white-space: nowrap;
+		}
 		.tel {
-			padding-left: 25px;
+			white-space: nowrap;
 		}
 
 	}
